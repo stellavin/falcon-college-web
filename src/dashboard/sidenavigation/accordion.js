@@ -12,7 +12,7 @@ export default function Accordion({ children }) {
 
   const toggle = React.useCallback(() => {
     setOpen((prevState) => !prevState);
-  }, []);z
+  }, []);
 
   const accordionItem = children[0];
   const accordionPanel = children[1];
