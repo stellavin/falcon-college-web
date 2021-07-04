@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import HomePage from "./pages";
-import DashboardLayout from "./dashboard";
+import DashboardLayout from "./dashboard/layout";
 import UnboxMessagePage from "./pages/messages/unbox";
 import UnreadMessagePage from "./pages/messages/unread";
 import WeddingEventsPage from "./pages/events/weddings";

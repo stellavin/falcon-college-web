@@ -1,7 +1,7 @@
-import Overlay from './provider/overlay';
-import TopNavigation from './topnavigation';
-import SideNavigation from './sidenavigation';
-import DashboardProvider from './provider/context';
+import Overlay from "./provider/overlay";
+import TopNavigation from "./topnavigation";
+import SideNavigation from "./sidenavigation";
+import DashboardProvider from "./provider/context";
 
 const style = {
   container: `bg-gray-100 h-screen overflow-hidden relative`,
