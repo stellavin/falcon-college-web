@@ -255,11 +255,9 @@ export default function Docs() {
             <span className="px-1 font-medium">pages</span>directory
           </li>
           <li className="mb-3">
-            Wrap your routes in<span className="px-1 font-medium">App.js</span>{" "}
+            Wrap your routes in<span className="px-1 font-medium">app.js</span>
             by the
             <span className="px-1 font-medium">DashboardLayout</span>component
-            imported from
-            <span className="px-1 font-medium">dashboard/layout.js</span>
           </li>
         </ul>
       </section>
@@ -302,9 +300,7 @@ export default function Docs() {
             </li>
             <li className="mb-3">
               Replace your layout by the
-              <span className="px-1 font-medium">DashboardLayout</span> imported
-              from
-              <span className="px-1 font-medium">dashboard/layout.js</span>
+              <span className="px-1 font-medium">DashboardLayout</span>component
             </li>
           </ul>
         </div>
@@ -324,7 +320,7 @@ export default function Docs() {
           <span className="px-1 font-medium">index.module.css</span>file
         </p>
         <p className="mt-5">
-          In the<span className="px-1 font-medium">dashboard/layout.js</span>{" "}
+          In the<span className="px-1 font-medium">dashboard/layout.js</span>
           file, the
           <span className="px-1 font-medium">Sidenavigation</span>component has
           as prop
