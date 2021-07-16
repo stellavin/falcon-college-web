@@ -1,12 +1,12 @@
-import SidenavItems from './items';
-import SidenavHeader from './header';
-import css from './index.module.css';
-import { useToggle } from '../provider/context';
+import SidenavItems from "./items";
+import SidenavHeader from "./header";
+import css from "./style.module.css";
+import { useToggle } from "../provider/context";
 
 const style = {
   mobilePosition: {
-    left: 'left-0',
-    right: 'right-0',
+    left: "left-0",
+    right: "right-0",
   },
   close: `hidden`,
   container: `pb-32 lg:pb-6`,
