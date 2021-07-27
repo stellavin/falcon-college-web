@@ -1,22 +1,22 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 // create new context
 const Context = React.createContext({});
 
 export default function DashboardProvider({ children }) {
   const [open, setOpen] = React.useState(false);
-  const ref = React.useRef();
+  const ref = React.useRef(null);
   const history = useHistory();
 
   const toggle = React.useCallback(() => {
-    setOpen(!open);
-  }, [open]);
+    setOpen((prevState) => !prevState);
+  }, []);
 
   // set the html tag overflow to hidden
   // close side navigation when you click on a sidenav item. it's triggered when viewport is less than 1024px
   React.useEffect(() => {
-    document.documentElement.style.overflow = 'hidden';
+    document.documentElement.style.overflow = "hidden";
     return history.listen(() => {
       if (open && window.innerWidth < 1024) {
         setOpen(false);
@@ -34,8 +34,8 @@ export default function DashboardProvider({ children }) {
         }
       }
     };
-    window.addEventListener('click', handleOutsideClick);
-    return () => window.removeEventListener('click', handleOutsideClick);
+    window.addEventListener("click", handleOutsideClick);
+    return () => window.removeEventListener("click", handleOutsideClick);
   }, [open, ref]);
 
   return (
