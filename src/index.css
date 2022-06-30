@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-gradient-2 {
+  background: linear-gradient(
+    316deg,
+    RGBA(182, 95, 196, 0.25) 1%,
+    RGBA(182, 95, 196, 0.25) 23%,
+    RGBA(16, 215, 226, 0.25) 68%,
+    RGBA(206, 252, 255)
+  );
+  background-size: 100%;
+  transition: background-size 1s;
+}
+
+.bg-gradient-3 {
+  background: linear-gradient(
+    160deg,
+    RGBA(182, 95, 196, 0.25) 7%,
+    RGBA(113, 243, 255, 0.25) 70%,
+    RGBA(16, 215, 226, 0.5) 77%,
+    RGBA(113, 243, 255, 0.25) 85%
+  );
+  background-size: 100%;
+  transition: background-size 1s;
+}
+
+.bg-gradient-4 {
+  background: #10d8e2;
+}
+
+.bg-gradient-5 {
+  color: #10d8e2;
+}
+
+.bg-gradient-6 {
+  color: #b75fc4;
+}
+
+.bg-gradient-7 {
+  color: #bedbfe;
+}
+.bg-gradient-8 {
+  color: #07136c;
+}

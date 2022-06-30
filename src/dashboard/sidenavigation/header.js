@@ -1,7 +1,7 @@
 export default function SidenavHeader() {
   return (
     <div className="bg-white flex items-center justify-center mb-6 pb-6 sticky top-0 z-10">
-      <img src="/images/2.png" width={120} height={120} alt="Lucha y vence" />
+      <h1 className="text-3xl mt-10 -mb-5">Falcon College</h1>
     </div>
   );
 }

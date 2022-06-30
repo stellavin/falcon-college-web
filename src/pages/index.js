@@ -1,5 +1,5 @@
-import Content from '../components/content';
+import Login from "./Onboarding/login";
 
 export default function HomePage() {
-  return <Content title="Home" />;
+  return <Login />;
 }

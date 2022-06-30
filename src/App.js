@@ -1,78 +1,48 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import HomePage from "./pages";
 import DashboardLayout from "./dashboard/layout";
-import UnboxMessagePage from "./pages/messages/unbox";
-import UnreadMessagePage from "./pages/messages/unread";
-import WeddingEventsPage from "./pages/events/weddings";
-import TaxesDocumentsPage from "./pages/documents/taxes";
-import TravelDocumentsPage from "./pages/documents/travel";
-import NetworkingEventPage from "./pages/events/networking";
-import ArchivedMessagePage from "./pages/messages/archived";
-import DocumentationPage from "./pages/guides/documentation";
-import VacationPicturesPage from "./pages/pictures/vacations";
-import CallStatisticsPage from "./pages/statistics/call-stats";
-import FinanceStatisticsPage from "./pages/statistics/finances";
-import UniversityPicturesPage from "./pages/pictures/university";
-import TripLogStatisticsPage from "./pages/statistics/trip-logs";
-import InsuranceDocumentsPage from "./pages/documents/insurance";
-import AnniversaryPicturesPage from "./pages/pictures/anniversary";
+import LecturesPage from "./pages/TeacherDashboard/lectures";
+import StudentPage from "./pages/StudentDashboard/student";
+import PresidentPage from "./pages/AdminDashboard/president";
+import ManageStudentsPage from "./pages/AdminDashboard/students";
+import ManageTeacherPage from "./pages/AdminDashboard/teachers";
 
 function App() {
   return (
     <Router>
-      <DashboardLayout>
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/documents/insurance">
-            <InsuranceDocumentsPage />
-          </Route>
-          <Route exact path="/documents/taxes">
-            <TaxesDocumentsPage />
-          </Route>
-          <Route exact path="/documents/travel">
-            <TravelDocumentsPage />
-          </Route>
-          <Route exact path="/events/networking">
-            <NetworkingEventPage />
-          </Route>
-          <Route exact path="/events/weddings">
-            <WeddingEventsPage />
-          </Route>
-          <Route exact path="/guides/documentation">
-            <DocumentationPage />
-          </Route>
-          <Route exact path="/messages/archived">
-            <ArchivedMessagePage />
-          </Route>
-          <Route exact path="/messages/unbox">
-            <UnboxMessagePage />
-          </Route>
-          <Route exact path="/messages/unread">
-            <UnreadMessagePage />
-          </Route>
-          <Route exact path="/pictures/anniversary">
-            <AnniversaryPicturesPage />
-          </Route>
-          <Route exact path="/pictures/university">
-            <UniversityPicturesPage />
-          </Route>
-          <Route exact path="/pictures/vacations">
-            <VacationPicturesPage />
-          </Route>
-          <Route exact path="/statistics/call-stats">
-            <CallStatisticsPage />
-          </Route>
-          <Route exact path="/statistics/finances">
-            <FinanceStatisticsPage />
-          </Route>
-          <Route exact path="/statistics/trip-logs">
-            <TripLogStatisticsPage />
-          </Route>
-        </Switch>
-      </DashboardLayout>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route exact path="/dashboard/lecture">
+          <DashboardLayout>
+            <LecturesPage />
+          </DashboardLayout>
+        </Route>
+        <Route exact path="/dashboard/results">
+          <DashboardLayout>
+            <StudentPage />
+          </DashboardLayout>
+        </Route>
+
+        <Route exact path="/dashboard/allLectures">
+          <DashboardLayout>
+            <PresidentPage />
+          </DashboardLayout>
+        </Route>
+
+        <Route exact path="/dashboard/manage-students">
+          <DashboardLayout>
+            <ManageStudentsPage />
+          </DashboardLayout>
+        </Route>
+
+        <Route exact path="/dashboard/manage-teachers">
+          <DashboardLayout>
+            <ManageTeacherPage />
+          </DashboardLayout>
+        </Route>
+      </Switch>
     </Router>
   );
 }
